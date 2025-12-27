@@ -40,7 +40,7 @@ header{
   background:#eef4ff;
   padding:6px 12px;
   border-radius:25px;
-  width:220px;
+  width:500px;
   margin-left:10px;
 }
 
@@ -199,19 +199,140 @@ footer{
 
 <!-- HEADER -->
 <header>
-  <div class="logo">🌈 Bal Lok</div>
+  <div class="logo"><img src="logo.png" height="90px" width="130px"> </div>
 
-  <div class="search-box">
-    <input type="text" placeholder="Search...">
-    <div class="search-icon">🔍</div>
-  </div>
+ <!-- Marquee Section -->
+<div class="header-marquee">
+  <p>🎉 Watch Cartoons, hear musics, learn basics, get entertained and learn in a fun and fruitful way - BalLok 🎉</p>
+</div>
+
+<style>
+.header-marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 10px 0;
+  background: #fff7e6;
+  border-radius: 12px;
+  border: 2px solid #ff9800;
+  text-align: center;
+  font-family: 'Comic Sans MS', 'Poppins', sans-serif;
+  font-size: 1em;
+  color: #ff5722;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+}
+
+.header-marquee p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Optional: hover effect to pause scrolling */
+.header-marquee:hover p {
+  animation-play-state: paused;
+}
+</style>
+
+
+
+  <!-- Nepal Time Display -->
+<div id="nepalTime" class="nepal-clock">Loading...</div>
+
+<style>
+/* Imported a nice Google font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+.nepal-clock {
+    font-family: 'Orbitron', sans-serif; /* futuristic/clean font */
+    font-size: 1.0em;
+    color: #ff5722;
+    text-align: center;
+    padding: 15px 25px;
+    border: 3px solid #ff5722;
+    border-radius: 15px;
+    width: max-content;
+    margin: 20px auto;
+    background: linear-gradient(145deg, #fff2e6, #ffe0b2);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.nepal-clock:hover {
+    transform: scale(1.1);
+    box-shadow: 8px 8px 25px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+</style>
+
+<script>
+function updateNepalTime() {
+    const now = new Date();
+    const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+    const nepalOffset = 5 * 60 + 45; // Nepal is UTC +5:45
+    const nepalTime = new Date(utc + (nepalOffset * 60000));
+
+    let hours = nepalTime.getHours();
+    const minutes = String(nepalTime.getMinutes()).padStart(2, '0');
+    const seconds = String(nepalTime.getSeconds()).padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    
+    hours = hours % 12;
+    hours = hours ? hours : 12; // handle 0 as 12
+
+    document.getElementById('nepalTime').textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
+}
+
+// Update every second
+setInterval(updateNepalTime, 1000);
+updateNepalTime(); // initial call
+</script>
+
 
   <div class="top-info">
-    <span>📧 nirvikadhikari8@gmail.com</span>
-    <span>📞 9845041333</span>
-  </div>
-<a href="file:///C:/Users/tirth/OneDrive/Desktop/Hackathon%20DEMO/login.html">
-  <div class="sign-in" title="Sign In">👤</div></a>
+  <a href="Aboutus.html" class="about-btn">About Us</a>
+</div>
+
+<style>
+/* Import a nice Google font */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.top-info {
+    display: flex;
+    justify-content: center; /* center if needed */
+    align-items: center;
+}
+
+/* Stylish button */
+.about-btn {
+    display: inline-block;
+    padding: 8px 20px;        /* smaller than before */
+    font-size: 14px;          /* smaller font */
+    font-family: 'Fredoka One', cursive; /* aesthetic font */
+    text-decoration: none;    /* remove underline */
+    color: white;
+    background-color: #ff9800;
+    border-radius: 20px;
+    border: none;
+    transition: transform 0.2s, background-color 0.2s;
+    text-align: center;
+}
+
+.about-btn:hover {
+    background-color: #ff5722;
+    transform: scale(1.1);
+}
+</style>
+
+<a href="index.html">
+  <div class="slog-in" title="Log In">👤</div></a>
 </header>
 
 <!-- HERO -->
@@ -222,26 +343,47 @@ footer{
 
 <!-- CATEGORIES -->
 <section class="categories">
-  <button style="padding:15px 30px; font-size:18px; border-radius:25px; border:none; background-color:#ff9800; color:white; cursor:pointer; transition:transform 0.2s, background-color 0.2s;" 
-        onmouseover="this.style.backgroundColor='#ff5722'; this.style.transform='scale(1.1)';" 
-        onmouseout="this.style.backgroundColor='#ff9800'; this.style.transform='scale(1)';"> <a href="file:///C:/Users/tirth/OneDrive/Desktop/Hackathon%20DEMO/shows.html">🍿Shows</a></button>
-</div>
-  <button style="padding:15px 30px; font-size:18px; border-radius:25px; border:none; background-color:#ff9800; color:white; cursor:pointer; transition:transform 0.2s, background-color 0.2s;" 
-        onmouseover="this.style.backgroundColor='#ff5722'; this.style.transform='scale(1.1)';" 
-        onmouseout="this.style.backgroundColor='#ff9800'; this.style.transform='scale(1)';">
-        <a href="file:///C:/Users/tirth/OneDrive/Desktop/Hackathon%20DEMO/music.html">🎵Music</a></button>
-
-  <button style="padding:15px 30px; font-size:18px; border-radius:25px; border:none; background-color:#ff9800; color:white; cursor:pointer; transition:transform 0.2s, background-color 0.2s;" 
-        onmouseover="this.style.backgroundColor='#ff5722'; this.style.transform='scale(1.1)';" 
-        onmouseout="this.style.backgroundColor='#ff9800'; this.style.transform='scale(1)';"><a href="file:///C:/Users/tirth/OneDrive/Desktop/Hackathon%20DEMO/stories.html" >📚Stories</span></a></button>
-
-  <button style="padding:15px 30px; font-size:18px; border-radius:25px; border:none; background-color:#ff9800; color:white; cursor:pointer; transition:transform 0.2s, background-color 0.2s;" 
-        onmouseover="this.style.backgroundColor='#ff5722'; this.style.transform='scale(1.1)';" 
-        onmouseout="this.style.backgroundColor='#ff9800'; this.style.transform='scale(1)';"><a href="file:///C:/Users/tirth/OneDrive/Desktop/Hackathon%20DEMO/learn.html">🧠Learn</a></button>
-  <button style="padding:15px 30px; font-size:18px; border-radius:25px; border:none; background-color:#ff9800; color:white; cursor:pointer; transition:transform 0.2s, background-color 0.2s;" 
-        onmouseover="this.style.backgroundColor='#ff5722'; this.style.transform='scale(1.1)';" 
-        onmouseout="this.style.backgroundColor='#ff9800'; this.style.transform='scale(1)';"><a href="file:///C:/Users/tirth/OneDrive/Desktop/Hackathon%20DEMO/games.html"> 🎮Games</a></button>
+  <a href="shows.html" class="category-btn">🍿 Shows</a>
+  <a href="music.html" class="category-btn">🎵 Music</a>
+  <a href="stories.html" class="category-btn">📚 Stories</a>
+  <a href="learn.html" class="category-btn">🧠 Learn</a>
+  <a href="games.html" class="category-btn">🎮 Games</a>
 </section>
+
+<style>
+/* Import a fun, aesthetic font */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px; /* spacing between buttons */
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.category-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    font-size: 16px;
+    font-family: 'Fredoka One', cursive;
+    text-decoration: none; /* removes blue underline */
+    color: white;
+    background-color: #ff9800;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+}
+
+.category-btn:hover {
+    background-color: #ff5722;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+</style>
+
 
 <!-- CONTENT -->
 <h2 class="section-title">🌟 Popular on Bal Lok</h2>

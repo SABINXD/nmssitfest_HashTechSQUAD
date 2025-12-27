@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bal Lok | Music & Rhymes</title>
+  <script src="tracking.js"></script>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:"Comic Sans MS",sans-serif; }
+    body { background: linear-gradient(#fff7e6,#e1f5fe); }
+    header { padding:15px; background:#fff; display:flex; align-items:center; gap:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); }
+    .back-btn { font-size:28px; text-decoration:none; }
+    .logo { font-size:28px; font-weight:bold; color:#ff3d3d; flex:1; text-align:center; }
+    .screen-time-banner { background:#fff3cd; padding:15px; text-align:center; margin:10px 20px; border-radius:10px; font-size:18px; font-weight:bold; box-shadow:0 3px 10px rgba(0,0,0,0.1); }
+    h2 { text-align:center; margin:30px 0 20px; font-size:32px; color:#ff9800; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px; padding:20px; }
+    .card { background:#fff; border-radius:25px; padding:15px; box-shadow:0 10px 25px rgba(0,0,0,0.15); text-align:center; transition:transform 0.3s; }
+    .card:hover { transform:scale(1.06); }
+    .card img { width:100%; height:220px; object-fit:cover; border-radius:15px; }
+    .card p { font-size:20px; margin:15px 0; font-weight:bold; }
+    .watch-btn { padding:15px 40px; font-size:20px; border-radius:30px; border:none; background:#ff9800; color:white; cursor:pointer; transition:0.3s; }
+    .watch-btn:hover { background:#ff5722; transform:scale(1.1); }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="E-abhibhavak.html" class="back-btn">⬅️</a>
+  <div class="logo">🎵 Music & Rhymes</div>
+</header>
+
+<div class="screen-time-banner" id="screenTimeDisplay">Loading...</div>
+
+<h2>English Rhymes</h2>
+<div class="grid">
+  <div class="card">
+    <img src="https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000059140/8b716890392bf80fbbbdc465881c43351e8c9b194499b207119d5bf1e0499db6" alt="Baby Shark">
+    <p>Baby Shark</p>
+    <button class="watch-btn" onclick="loadVideo('baby-shark', 'Baby Shark', 'rhymes', 3, 'yCjJyiqpAuU')">
+     <a href="https://www.youtube.com/watch?v=XqZsoesa55w" style="text-decoration: none; color: inherit;"> Watch </a></button>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/S/pv-target-images/81728def6702a5ac482d482e58d19a336fb9cd41c424848695a7e3736a4e52e3.jpg" alt="Johny Johny">
+    <p>Johny Johny Yes Papa</p>
+    <button class="watch-btn" onclick="loadVideo('johny', 'Johny Johny Yes Papa', 'rhymes', 2, 'WRVsOChNbkk')">
+      <a href="https://www.youtube.com/watch?v=F4tHL8reNCs" style="text-decoration: none; color: inherit;">Watch </a> </button>
+  </div>
+
+  <div class="card">
+    <img src="https://monkeypen.com/cdn/shop/articles/Twinkle_Twinkle_Little_Star_Thumbnail_Blog.png?crop=center&height=1200&v=1764074005&width=1200" alt="Twinkle Twinkle">
+    <p>Twinkle Twinkle Little Star</p>
+    <button class="watch-btn" onclick="loadVideo('twinkle', 'Twinkle Twinkle', 'rhymes', 2, 'L_dWvTCdIqE')">
+      <a href="https://www.youtube.com/watch?v=yCjJyiqpAuU" style="text-decoration: none; color: inherit;">Watch </a> </button>
+  </div>
+</div>
+
+<h2>🇳🇵 Nepali Rhymes</h2>
+<div class="grid">
+  <div class="card">
+    <img src="https://i.ytimg.com/vi/H3if5Xf4uFc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDo61ssE1aNADvFvOiucnGYrK2d1A" alt="Tali Bajau">
+    <p>Tali Bajau</p>
+    <button class="watch-btn" onclick="loadVideo('tali', 'Tali Bajau, 'rhymes', 3,'H3if5Xf4uFc')">
+      <a href="https://www.youtube.com/watch?v=H3if5Xf4uFc" style="text-decoration: none; color: inherit;">Watch </a></button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.ytimg.com/vi/UHNJCTXeEvg/maxresdefault.jpg" alt="Kaag Kag">
+    <p>Kaag Kag Kag</p>
+    <button class="watch-btn" onclick="loadVideo('kaag', 'Kaag Kag Kag', 'rhymes', 3, 'UHNJCTXeEvg')">
+      <a href="https://www.youtube.com/watch?v=LmD17QCyN-Q" style="text-decoration: none; color: inherit;">Watch </a> </button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.ytimg.com/vi/h9D7WY6a5TY/maxresdefault.jpg" alt="Aitabara Bihana">
+    <p>Aitabara Bihana</p>
+    <button class="watch-btn" onclick="loadVideo('aitabara', 'Aitabara Bihana', 'rhymes', 4, 'h9D7WY6a5TY')">
+      <a href="https://www.youtube.com/watch?v=h9D7WY6a5" style="text-decoration: none; color: inherit;">Watch </a> </button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.ytimg.com/vi/_oRAsYlhKoU/maxresdefault.jpg" alt="Haatti Aayo">
+    <p>Haatti Aayo</p>
+    <button class="watch-btn" onclick="loadVideo('haatti', 'Haatti Aayo', 'rhymes', 4, '_oRAsYlhKoU')">
+      <a href="https://www.youtube.com/watch?v=_oRAsYlhKoU" style="text-decoration: none; color: inherit;"> Watch </a> </button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.ytimg.com/vi/6QJIkMZmpuE/maxresdefault.jpg" alt="Pani Paryo">
+    <p>Pani Paryo Tap Tap</p>
+    <button class="watch-btn" onclick="loadVideo('pani', 'Pani Paryo Tap Tap', 'rhymes', 3, '6QJIkMZmpuE')">
+      <a href="https://www.youtube.com/watch?v=6QJIkMZmpuE" style="text-decoration: none; color: inherit;"> Watch </a> 
+    </button>
+  </div>
+</div>
+
+</body>
+</html>

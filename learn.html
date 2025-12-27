@@ -3,55 +3,190 @@
 <head>
 <title>Bal Lok | Learn</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-body{margin:0;font-family:Comic Sans MS;background:linear-gradient(#e8f5e9,#fff);}
-header{padding:15px;background:#fff;display:flex;gap:15px;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:20px;}
-.card{background:#fff;border-radius:20px;padding:20px;text-align:center;
-box-shadow:0 8px 20px #bbb;transition:.3s;}
-.card:hover{transform:scale(1.1);}
-a{text-decoration:none;color:#333;font-weight:bold;}
+body{
+    margin:0;
+    font-family:Comic Sans MS;
+    background:linear-gradient(#fff8e1,#ffffff);
+}
+
+/* HEADER */
+header{
+    padding:15px 25px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+/* SPACE FOR BANNER / IMAGE */
+.top-space{
+    height:130px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px;
+    padding:30px;
+}
+
+/* CARD */
+.card{
+    background:#fff;
+    border-radius:25px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+/* IMAGE */
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+/* BUTTON LINK */
+.card a{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 30px;
+    background:#ff9800;
+    color:#fff;
+    text-decoration:none;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:600px){
+    .grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 
 <body>
+
 <header>
-  <a href="file:///C:/Users/tirth/OneDrive/Desktop/Hackathon%20DEMO/E-abhibhavak.html">⬅️</a>
-  <h1>🧠 Learn Basics</h1>
+   
+<button
+  style="
+    outline:none;
+    cursor:pointer;
+    border:none;
+    padding:6px 16px;
+    font-family:inherit;
+    font-size:14px;
+    position:relative;
+    display:inline-block;
+    letter-spacing:0.04rem;
+    font-weight:700;
+    border-radius:500px;
+    overflow:hidden;
+    background:#ffde9c;
+  "
+  onmouseover="this.children[1].style.transform='translateX(100%) skew(30deg)'"
+  onmouseout="this.children[1].style.transform='translateX(0) skew(30deg)'"
+>
+  <!-- TEXT / LINK -->
+  <a href="E-abhibhavak.html"
+     style="
+       position:relative;
+       z-index:2;
+       color:black;
+       text-decoration:none;
+       transition:color 0.3s;
+     ">
+     BACK
+  </a>
+
+  <!-- HOVER LAYER -->
+  <span
+    style="
+      position:absolute;
+      top:0;
+      left:-10%;
+      width:120%;
+      height:100%;
+      background:rgb(239, 111, 12);
+      transform:skew(30deg);
+      transition:transform 0.4s cubic-bezier(0.3,1,0.8,1);
+      z-index:1;
+    "
+  ></span>
+</button>
+
+
+
+
+
+    <h1>Learn Basics</h1>
 </header>
 
+<div class="top-space"></div>
+
 <section class="grid">
-  <div class="card">
-    📖<br>
-    <a href="https://img.freepik.com/free-vector/english-alphabets_1308-2901.jpg?semt=ais_hybrid&w=740&q=80">A–Z Alphabet</a>
-  </div>
 
-  <div class="card">
-    🔢<br>
-    <a href="https://i.ytimg.com/vi/lLztC31xyrE/maxresdefault.jpg">1–100 Numbers</a>
-  </div>
+    <!-- A to E Alphabet -->
+    <div class="card">
+        <img src="https://i.ytimg.com/vi/Mjoe640funY/maxresdefault.jpg">
+        <a href="atoe.docx">A to E Alphabet</a>
+    </div>
 
-  <div class="card">
-    🎨<br>
-    <a href="https://spokenenglish.guru/wp-content/uploads/2025/01/4-min.jpg">Colors</a>
-  </div>
+    <!-- Numbers -->
+    <div class="card">
+        <img src="https://i.ytimg.com/vi/lLztC31xyrE/maxresdefault.jpg">
+        <a href="https://i.ytimg.com/vi/lLztC31xyrE/maxresdefault.jpg">1 to 100 Numbers</a>
+    </div>
 
-  <div class="card">
-    🐶<br>
-    <a href="https://monkeypen.com/cdn/shop/products/Wild-Animal-Poster-for-Kids_c20d8d0e-8e4c-43cd-91a2-43f0cec17c08.jpg?v=1659014788">Animals</a>
-  </div>
-<div class="card">
-    &#x1f1f3;&#x1f1f5;<br>	
-    <a href="https://image.slidesharecdn.com/sharadutsav-231011235307-ae4ce176/75/Festivals-of-Nepal-pptx-4-2048.jpg">Nation</a>
-  </div>
-	<div class="card">
-    क ख ग घ<br>	
-    <a href="https://i.ytimg.com/vi/I8bK-P8GYY4/maxresdefault.jpg">Nepali Alphabets (Consonents)</a>
-  </div>
- 	<div class="card">
-   अ आ इ ई<br>	
-    <a href="https://img.drz.lazcdn.com/static/np/p/5a6a33225fbbd6ecf4051d8a29ba8bc7.jpg_960x960q80.jpg_.webp">Nepali Phonetics (Vowels)</a>
-  </div>
+    <!-- Colors -->
+    <div class="card">
+        <img src="https://spokenenglish.guru/wp-content/uploads/2025/01/4-min.jpg">
+        <a href="https://spokenenglish.guru/wp-content/uploads/2025/01/4-min.jpg">Colors</a>
+    </div>
+
+    <!-- Animals -->
+    <div class="card">
+        <img src="https://monkeypen.com/cdn/shop/products/Wild-Animal-Poster-for-Kids_c20d8d0e-8e4c-43cd-91a2-43f0cec17c08.jpg">
+        <a href="https://monkeypen.com/cdn/shop/products/Wild-Animal-Poster-for-Kids_c20d8d0e-8e4c-43cd-91a2-43f0cec17c08.jpg">Animals</a>
+    </div>
+
+    <!-- Nation -->
+    <div class="card">
+        <img src="https://image.slidesharecdn.com/sharadutsav-231011235307-ae4ce176/75/Festivals-of-Nepal-pptx-4-2048.jpg">
+        <a href="https://image.slidesharecdn.com/sharadutsav-231011235307-ae4ce176/75/Festivals-of-Nepal-pptx-4-2048.jpg">
+             Nation
+        </a>
+    </div>
+
+    <!-- Nepali Consonants -->
+    <div class="card">
+        <img src="https://i.ytimg.com/vi/I8bK-P8GYY4/maxresdefault.jpg">
+        <a href="https://i.ytimg.com/vi/I8bK-P8GYY4/maxresdefault.jpg">
+            Nepali Alphabets (Consonants)
+        </a>
+    </div>
+
+    <!-- Nepali Vowels -->
+    <div class="card">
+        <img src="https://img.drz.lazcdn.com/static/np/p/5a6a33225fbbd6ecf4051d8a29ba8bc7.jpg_960x960q80.jpg_.webp">
+        <a href="https://img.drz.lazcdn.com/static/np/p/5a6a33225fbbd6ecf4051d8a29ba8bc7.jpg_960x960q80.jpg_.webp">
+            Nepali Phonetics (Vowels)
+        </a>
+    </div>
+
 </section>
 
 </body>

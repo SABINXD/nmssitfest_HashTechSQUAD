@@ -1,276 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bal Lok - Kids World</title>
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:"Comic Sans MS","Poppins",sans-serif;
-}
-
-body{
-  background:linear-gradient(135deg,#e0f2ff,#fff9e6);
-}
-
-/* HEADER */
-header{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:12px 18px;
-  background:white;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.logo{
-  font-size:28px;
-  font-weight:bold;
-  color:#ff3d3d;
-}
-
-/* SEARCH */
-.search-box{
-  display:flex;
-  align-items:center;
-  background:#eef4ff;
-  padding:6px 12px;
-  border-radius:25px;
-  width:220px;
-  margin-left:10px;
-}
-
-.search-box input{
-  border:none;
-  outline:none;
-  background:transparent;
-  font-size:14px;
-  flex:1;
-}
-
-.search-icon{
-  font-size:18px;
-  cursor:pointer;
-}
-
-/* CONTACT INFO */
-.top-info{
-  margin-left:auto;
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-size:13px;
-}
-
-.top-info span{
-  background:#fff3cd;
-  padding:6px 10px;
-  border-radius:20px;
-}
-
-/* SIGN IN */
-.sign-in{
-  width:42px;
-  height:42px;
-  border-radius:50%;
-  background:#ff9800;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:20px;
-  cursor:pointer;
-  transition:transform 0.3s, background 0.3s;
-}
-
-.sign-in:hover{
-  transform:scale(1.2) rotate(8deg);
-  background:#ff5722;
-}
-
-/* HERO */
-.hero{
-  text-align:center;
-  padding:40px 20px;
-}
-
-.hero h1{
-  font-size:40px;
-  color:#333;
-}
-
-.hero span{
-  color:#ff9800;
-}
-
-.hero p{
-  font-size:18px;
-  margin-top:10px;
-  color:#555;
-}
-
-/* CATEGORIES */
-.categories{
-  display:flex;
-  justify-content:center;
-  gap:25px;
-  margin:30px 0;
-  flex-wrap:wrap;
-}
-
-.cat{
-  width:110px;
-  height:110px;
-  background:white;
-  border-radius:25px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  font-size:28px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.12);
-  cursor:pointer;
-  transition:transform 0.3s;
-  text-decoration:none;
-  color:inherit;
-}
-
-.cat span{
-  font-size:14px;
-  margin-top:8px;
-}
-
-.cat:hover{
-  transform:scale(1.15) rotate(3deg);
-}
-
-/* CONTENT */
-.section-title{
-  text-align:center;
-  font-size:26px;
-  margin:20px 0;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
-  padding:20px;
-}
-
-.card{
-  background:white;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-  transition:transform 0.3s;
-}
-
-.card:hover{
-  transform:translateY(-10px) scale(1.04);
-}
-
-.card img{
-  width:100%;
-  height:150px;
-  object-fit:cover;
-}
-
-.card p{
-  padding:12px;
-  text-align:center;
-  font-weight:bold;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-  font-size:14px;
-  color:#555;
-}
-</style>
+  <meta charset="UTF-8" />
+  <title>Ballok Login</title>
 </head>
 
-<body>
+<body style="
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100vh;
+  font-family:'Comic Sans MS','Poppins',sans-serif;
+  overflow:hidden;
+">
 
-<!-- HEADER -->
-<header>
-  <div class="logo">🌈 Bal Lok</div>
+  <!-- Blurred Background -->
+  <div style="
+    position:fixed;
+    inset:0;
+    background-image:url('https://media.istockphoto.com/id/2191672353/vector/playful-kindergarten-border-with-crayon-doodles.jpg?s=612x612&w=0&k=20&c=kcRc1rP41kYxB5jo6SlUKM3OVMyTxy3UZNbe3k5ok6k=');
+    background-size:cover;
+    background-position:center;
+    filter:blur(8px) brightness(1.05);
+    transform:scale(1.1);
+    z-index:-1;
+  "></div>
 
-  <div class="search-box">
-    <input type="text" placeholder="Search...">
-    <div class="search-icon">🔍</div>
+  <!-- Center Container -->
+  <div style="
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  ">
+
+    <!-- White Card -->
+    <div style="
+      background:#ffffff;
+      width:420px;
+      padding:35px 30px 40px;
+      border-radius:20px;
+      text-align:center;
+      border:3px dashed #000;
+      box-shadow:0 20px 40px rgba(0,0,0,0.15);
+      animation:fadeIn 0.6s ease-in-out;
+    ">
+
+      <!-- Logo -->
+      <img 
+        src="logo.png" 
+        alt="Ballok Logo"
+        style="
+          width: 250px; height: auto;
+          margin-bottom:20px;
+        "
+      />
+
+      <!-- Title -->
+      <h1 style="
+        font-size:32px;
+        margin-bottom:30px;
+        color:#000;
+      ">
+        Who Is Using?
+      </h1>
+
+      <!-- Parent Button -->
+      <button
+        style="
+          width:100%;
+          padding:14px;
+          font-size:18px;
+          border-radius:12px;
+          border:2px solid #000;
+          background:#fff;
+          cursor:pointer;
+          transition:all 0.25s ease;
+          margin-top:16px;
+          font-weight:600;
+        "
+        onmouseover="
+          this.style.transform='translateY(-4px) scale(1.04)';
+          this.style.boxShadow='0 12px 25px rgba(0,0,0,0.2)';
+          this.style.background='#ffe066';
+        "
+        onmouseout="
+          this.style.transform='scale(1)';
+          this.style.boxShadow='none';
+          this.style.background='#fff';
+        "
+      >
+      <a href="login.php" style=" text-decoration: none; color: #000;">  Login As Parents 👩🏻‍👨🏻 </a>
+      </button>
+
+      <!-- Child Button -->
+      <button
+        style="
+          width:100%;
+          padding:14px;
+          font-size:18px;
+          border-radius:12px;
+          border:2px solid #000;
+          background:#fff;
+          cursor:pointer;
+          transition:all 0.25s ease;
+          margin-top:16px;
+          font-weight:600;
+        "
+        onmouseover="
+          this.style.transform='translateY(-4px) scale(1.04)';
+          this.style.boxShadow='0 12px 25px rgba(0,0,0,0.2)';
+          this.style.background='#caffbf';
+        "
+        onmouseout="
+          this.style.transform='scale(1)';
+          this.style.boxShadow='none';
+          this.style.background='#fff';
+        "
+      >
+      <a href="E-abhibhavak.html" style=" text-decoration: none; color: #000;">       
+      Login As Child 👶
+      </a>
+      </button>
+
+    </div>
   </div>
 
-  <div class="top-info">
-    <span>📧 nirvikadhikari8@gmail.com</span>
-    <span>📞 9845041333</span>
-  </div>
-<a href="login.html">
-  <div class="sign-in" title="Sign In">👤</div></a>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <h1>Welcome to <span>Bal Lok</span> 🎉</h1>
-  <p>A safe, fun and learning world for kids 👧🧒</p>
-</section>
-
-<!-- CATEGORIES -->
-<section class="categories">
-  <button style="padding:15px 30px; font-size:18px; border-radius:25px; border:none; background-color:#ff9800; color:white; cursor:pointer; transition:transform 0.2s, background-color 0.2s;" 
-        onmouseover="this.style.backgroundColor='#ff5722'; this.style.transform='scale(1.1)';" 
-        onmouseout="this.style.backgroundColor='#ff9800'; this.style.transform='scale(1)';"> <a href="shows.html">🍿Shows</a></button>
-</div>
-  <button style="padding:15px 30px; font-size:18px; border-radius:25px; border:none; background-color:#ff9800; color:white; cursor:pointer; transition:transform 0.2s, background-color 0.2s;" 
-        onmouseover="this.style.backgroundColor='#ff5722'; this.style.transform='scale(1.1)';" 
-        onmouseout="this.style.backgroundColor='#ff9800'; this.style.transform='scale(1)';">
-        <a href="music.html">🎵Music</a></button>
-
-  <button style="padding:15px 30px; font-size:18px; border-radius:25px; border:none; background-color:#ff9800; color:white; cursor:pointer; transition:transform 0.2s, background-color 0.2s;" 
-        onmouseover="this.style.backgroundColor='#ff5722'; this.style.transform='scale(1.1)';" 
-        onmouseout="this.style.backgroundColor='#ff9800'; this.style.transform='scale(1)';"><a href="stories.html" >📚Stories</span></a></button>
-
-  <button style="padding:15px 30px; font-size:18px; border-radius:25px; border:none; background-color:#ff9800; color:white; cursor:pointer; transition:transform 0.2s, background-color 0.2s;" 
-        onmouseover="this.style.backgroundColor='#ff5722'; this.style.transform='scale(1.1)';" 
-        onmouseout="this.style.backgroundColor='#ff9800'; this.style.transform='scale(1)';"><a href="learn.html">🧠Learn</a></button>
-  <button style="padding:15px 30px; font-size:18px; border-radius:25px; border:none; background-color:#ff9800; color:white; cursor:pointer; transition:transform 0.2s, background-color 0.2s;" 
-        onmouseover="this.style.backgroundColor='#ff5722'; this.style.transform='scale(1.1)';" 
-        onmouseout="this.style.backgroundColor='#ff9800'; this.style.transform='scale(1)';"><a href="games.html"> 🎮Games</a></button>
-</section>
-
-<!-- CONTENT -->
-<h2 class="section-title">🌟 Popular on Bal Lok</h2>
-
-<section class="cards">
-  <div class="card">
-    <img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/6016x4016+0+0/resize/1100/quality/50/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fb8%2F57%2F47e53f8240eaae2cf7e4d70ca904%2Fgettyimages-2165063697.jpg">
-    <p>Fun Animal Stories</p>
-  </div>
-
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
-    <p>Learn ABC & Numbers</p>
-  </div>
-
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30">
-    <p>Cartoon Shows</p>
-  </div>
-
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74">
-    <p>Music & Rhymes</p>
-  </div>
-</section>
-
-<footer>
-  © 2025 Bal Lok 🌈 | Made with ❤️ for Kids
-</footer>
+  <!-- Inline Animation -->
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 
 </body>
 </html>

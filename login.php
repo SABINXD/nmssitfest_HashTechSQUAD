@@ -101,20 +101,17 @@ if (isset($_POST['login'])) {
             align-items: center;
             padding: 20px;
         }
-        
         .container {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            width: 90%;
-            max-width: 450px;
-            background-attachment: fixed
-            max-height: 100vh;     
-            overflow-y: auto;
-            margin-right: 180px;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        width: 90%;
+        max-width: 450px;
+        max-height: 90vh;       
+             
         }
-        
+
         h1 {
             text-align: center;
             margin-bottom: 30px;
