@@ -72,9 +72,53 @@
   </style>
 </head>
 <body>
-
+<br>
 <header>
-  <a href="E-abhibhavak.html" class="back-btn">⬅️</a>
+ <button
+  style="
+    outline:none;
+    cursor:pointer;
+    border:none;
+    padding:6px 16px;
+    font-family:inherit;
+    font-size:14px;
+    position:relative;
+    display:inline-block;
+    letter-spacing:0.04rem;
+    font-weight:700;
+    border-radius:500px;
+    overflow:hidden;
+    background:#ffde9c;
+  "
+  onmouseover="this.children[1].style.transform='translateX(100%) skew(30deg)'"
+  onmouseout="this.children[1].style.transform='translateX(0) skew(30deg)'"
+>
+  <!-- TEXT / LINK -->
+  <a href="E-abhibhavak.html"
+     style="
+       position:relative;
+       z-index:2;
+       color:black;
+       text-decoration:none;
+       transition:color 0.3s;
+     ">
+     BACK
+  </a>
+   <!-- HOVER LAYER -->
+  <span
+    style="
+      position:absolute;
+      top:0;
+      left:-10%;
+      width:120%;
+      height:100%;
+      background:rgb(239, 111, 12);
+      transform:skew(30deg);
+      transition:transform 0.4s cubic-bezier(0.3,1,0.8,1);
+      z-index:1;
+    "
+  ></span>
+</button>
   <div class="logo">📚 Magical Stories</div>
 </header>
 
@@ -86,21 +130,21 @@
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaoIzODtBroz0X8WIRkKoq71Dsi6lzurgRMQ&s" alt="Singh ra Musa">
     <p>सिंह र मुसा कथा</p>
     <button class="watch-btn" onclick="loadVideo('story-nep1', 'सिंह र मुसा कथा', 'stories', 5, '0j3XnBHG5lA')">
-      <a href="https://www.youtube.com/watch?v=0fnuu5am3rI"> Watch </a> </button>
+      <a href="https://www.youtube.com/watch?v=0fnuu5am3rI"style="text-decoration: none; color: inherit;"> Watch </a> </button>
   </div>
 
   <div class="card">
     <img src="https://i.ytimg.com/vi/4CX4pcTFiCA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDbVZzDyHZdKmafZ2-17Q24sotUVw" alt="Chalak Kag">
     <p>चालाक काग कथा</p>
     <button class="watch-btn" onclick="loadVideo('story-nep2', 'चालाक काग कथा', 'stories', 5, 'm1t0pM8xjvE')">
-      <a href="https://www.youtube.com/watch?v=ZBry9o8wa8Y"> Watch </a> </button>
+      <a href="https://www.youtube.com/watch?v=ZBry9o8wa8Y"style="text-decoration: none; color: inherit;"> Watch </a> </button>
   </div>
 
   <div class="card">
     <img src="https://i.ytimg.com/vi/xTXLUpGIock/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLD7xGzUlKrjFEhQu15eAypv2p74Og" alt="Naitik Katha">
     <p>नैतिक कथा नेपाली</p>
     <button class="watch-btn" onclick="loadVideo('story-nep3', 'नैतिक कथा नेपाली', 'stories', 5, '5o9hRzFdcS8')">
-      <a href="https://www.youtube.com/watch?v=xTXLUpGIock&list=PLwTOhalXfJIXENFDL4p0iaomWwb-x_jt1"> Watch </a> </button>
+      <a href="https://www.youtube.com/watch?v=xTXLUpGIock&list=PLwTOhalXfJIXENFDL4p0iaomWwb-x_jt1"style="text-decoration: none; color: inherit;"> Watch </a> </button>
   </div>
 </div>
 
@@ -110,21 +154,21 @@
     <img src="https://i.ytimg.com/vi/GxcGVCEEdcU/maxresdefault.jpg" alt="Lion and Mouse">
     <p>The Lion and the Mouse</p>
     <button class="watch-btn" onclick="loadVideo('story-eng1', 'The Lion and the Mouse', 'stories', 5, 'AdPtZVmP-6A')">
-      <a href="https://www.youtube.com/watch?v=23_mESawEEc"> Watch </a> </button>
+      <a href="https://www.youtube.com/watch?v=23_mESawEEc"style="text-decoration: none; color: inherit;"> Watch </a> </button>
   </div>
 
   <div class="card">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNpSITvBmTQZaJod4iBf7Iq4nrKTX28l0oHA&s" alt="Thirsty Crow">
     <p>The Thirsty Crow</p>
     <button class="watch-btn" onclick="loadVideo('story-eng2', 'The Thirsty Crow', 'stories', 5, 'MYdBDw3lF4M')">
-      <a href="https://www.youtube.com/watch?v=xkutv64_pWc"> Watch </a> </button>
+      <a href="https://www.youtube.com/watch?v=xkutv64_pWc"style="text-decoration: none; color: inherit;"> Watch </a> </button>
   </div>
 
   <div class="card">
     <img src="https://i.ytimg.com/vi/GygBY01Qbnk/sddefault.jpg" alt="Bedtime Story">
     <p>Bedtime Moral Story</p>
     <button class="watch-btn" onclick="loadVideo('story-eng3', 'Bedtime Moral Story', 'stories', 5, 'Jw6iP9y9n2E')">
-      <a href="https://www.youtube.com/watch?v=GygBY01Qbnk"> Watch </a> </button>
+      <a href="https://www.youtube.com/watch?v=GygBY01Qbnk"style="text-decoration: none; color: inherit;"> Watch </a> </button>
   </div>
 </div>
 

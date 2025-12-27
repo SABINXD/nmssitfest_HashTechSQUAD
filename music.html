@@ -25,7 +25,51 @@
 <body>
 
 <header>
-  <a href="E-abhibhavak.html" class="back-btn">⬅️</a>
+ <button
+  style="
+    outline:none;
+    cursor:pointer;
+    border:none;
+    padding:6px 16px;
+    font-family:inherit;
+    font-size:14px;
+    position:relative;
+    display:inline-block;
+    letter-spacing:0.04rem;
+    font-weight:700;
+    border-radius:500px;
+    overflow:hidden;
+    background:#ffde9c;
+  "
+  onmouseover="this.children[1].style.transform='translateX(100%) skew(30deg)'"
+  onmouseout="this.children[1].style.transform='translateX(0) skew(30deg)'"
+>
+  <!-- TEXT / LINK -->
+  <a href="E-abhibhavak.html"
+     style="
+       position:relative;
+       z-index:2;
+       color:black;
+       text-decoration:none;
+       transition:color 0.3s;
+     ">
+     BACK
+  </a>
+   <!-- HOVER LAYER -->
+  <span
+    style="
+      position:absolute;
+      top:0;
+      left:-10%;
+      width:120%;
+      height:100%;
+      background:rgb(239, 111, 12);
+      transform:skew(30deg);
+      transition:transform 0.4s cubic-bezier(0.3,1,0.8,1);
+      z-index:1;
+    "
+  ></span>
+</button>
   <div class="logo">🎵 Music & Rhymes</div>
 </header>
 
@@ -51,7 +95,7 @@
     <img src="https://monkeypen.com/cdn/shop/articles/Twinkle_Twinkle_Little_Star_Thumbnail_Blog.png?crop=center&height=1200&v=1764074005&width=1200" alt="Twinkle Twinkle">
     <p>Twinkle Twinkle Little Star</p>
     <button class="watch-btn" onclick="loadVideo('twinkle', 'Twinkle Twinkle', 'rhymes', 2, 'L_dWvTCdIqE')">
-      <a href="https://www.youtube.com/watch?v=yCjJyiqpAuU" style="text-decoration: none; color: inherit;">Watch </a> </button>
+      <a href="https://www.youtube.com/watch?v=yCjJyiqpAuU"style="text-decoration: none; color: inherit;">Watch </a> </button>
   </div>
 </div>
 
@@ -61,7 +105,7 @@
     <img src="https://i.ytimg.com/vi/H3if5Xf4uFc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDo61ssE1aNADvFvOiucnGYrK2d1A" alt="Tali Bajau">
     <p>Tali Bajau</p>
     <button class="watch-btn" onclick="loadVideo('tali', 'Tali Bajau, 'rhymes', 3,'H3if5Xf4uFc')">
-      <a href="https://www.youtube.com/watch?v=H3if5Xf4uFc" style="text-decoration: none; color: inherit;">Watch </a></button>
+      <a href="https://www.youtube.com/watch?v=H3if5Xf4uFc"style="text-decoration: none; color: inherit;">Watch </a></button>
   </div>
 
   <div class="card">
