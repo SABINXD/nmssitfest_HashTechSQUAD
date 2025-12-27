@@ -104,12 +104,15 @@ if (isset($_POST['login'])) {
         
         .container {
             background: white;
-            padding: 40px;
+            padding: 30px;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            width: 100%;
+            width: 90%;
             max-width: 450px;
             background-attachment: fixed
+            max-height: 100vh;     
+            overflow-y: auto;
+            margin-right: 180px;
         }
         
         h1 {
@@ -121,10 +124,11 @@ if (isset($_POST['login'])) {
         .logo {
             text-align: center;
             margin-bottom: 25px;
+            margin: right 20px;
         }
         
         .logo img {
-            max-width: 250px;
+            max-width: 315px;
             height: auto;
         }
         
