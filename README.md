@@ -1,2 +1,2 @@
 # nmssitfest_HashTechSQUAD
-HashTech SQUADn for the  hackthon day 2
+HashTech SQUADn for the  hackthon day-2
